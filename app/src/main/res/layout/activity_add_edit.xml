@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FB"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvSelectionPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите продукт из справочника:"
+        android:textColor="#424242"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <Spinner
+            android:id="@+id/spinnerProducts"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Детали порции:"
+        android:textColor="#424242"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etGrams"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:hint="Вес порции в граммах (г)"
+        android:inputType="numberDecimal"
+        android:background="@android:color/transparent"
+        android:drawableStart="@android:drawable/ic_menu_sort_by_size"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etCategory"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:hint="Категория (Завтрак, Обед, Перекус)"
+        android:inputType="text"
+        android:background="@android:color/transparent"
+        android:drawableStart="@android:drawable/ic_menu_today"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:hint="Дата (ДД.ММ.ГГГГ)"
+        android:inputType="date"
+        android:background="@android:color/transparent"
+        android:drawableStart="@android:drawable/ic_menu_my_calendar"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Сохранить в дневник"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"/>
+</LinearLayout>

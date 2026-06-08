@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FB"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Новый продукт (на 100г):"
+                android:textStyle="bold"
+                android:textColor="#424242"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etProdTitle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Название (например, Банан)"
+                android:inputType="text"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/etProdProt"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Белки"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <EditText
+                    android:id="@+id/etProdFats"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Жиры"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <EditText
+                    android:id="@+id/etProdCarbs"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Углев."
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etProdCal"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Калорийность (ккал)"
+                android:inputType="number"
+                android:padding="10dp"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/btnAddProduct"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Добавить в справочник"
+                android:backgroundTint="#03DAC5"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ваш справочник продуктов:"
+        android:textStyle="bold"
+        android:textColor="#757575"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+</LinearLayout>
